@@ -1,16 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Main } from '../../pages';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css'; 
+import { Header, Main } from "../../pages";
 
 const App = () => {
-    return (
-            <Router>
-                <Routes>
-                    <Route path='/' element={<Main />}/>
-                </Routes>
-            </Router>
-    );
-}
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route element={<Header/>} >
+            <Route path="/" element={<Main />} />
+          </Route>
+        </Routes>
+      </Router>
+    </div>
+  );
+};
 
 export default App;

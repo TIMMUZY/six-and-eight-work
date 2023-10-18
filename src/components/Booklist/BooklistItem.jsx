@@ -1,8 +1,10 @@
 import { Button } from "react-bootstrap";
 import classes from './Booklist.module.css';
 
-const BooklistItem = ({ book ,onHandler}) => {
+const BooklistItem = ({ book, addTocart }) => {
   const { id, title, author, price, imgUrl } = book;
+
+  const onAddToCart = () => addTocart(id)
 
   return (
     <li className={classes.list_item} >
@@ -14,8 +16,7 @@ const BooklistItem = ({ book ,onHandler}) => {
         <h4>{title}</h4>
         <div>{author}</div>
         <div className={classes.list_item_price}>{price}$</div>
-        <Button onClick={onHandler}>Add to card</Button>
-
+        <Button onClick={onAddToCart}>Add to cart</Button>
       </div>
     </li>
   );

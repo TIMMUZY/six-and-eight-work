@@ -52,6 +52,6 @@ extraReducers: (builder) => {
 })
 const usersReducer = usersSlice.reducer;
 
-export const { setError, setLoading, setUsers } = usersSlice.actions;
+// export const { setError, setLoading, setUsers } = usersSlice.actions;
 
 export default usersReducer;
